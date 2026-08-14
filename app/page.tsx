@@ -253,7 +253,7 @@ export default function MerchPage() {
             Join thousands of creators earning passive income with custom merchandise
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/create" className="px-8 py-4 bg-white text-purple-900 font-semibold rounded-xl hover:bg-gray-100 transition flex items-center gap-2">
+            <a  className="px-8 py-4 bg-white text-purple-900 font-semibold rounded-xl hover:bg-gray-100 transition flex items-center gap-2">
               <Zap className="w-5 h-5" />
               Create Your First Product
             </a>
