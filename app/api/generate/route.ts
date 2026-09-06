@@ -33,7 +33,7 @@ async function gen(p: string): Promise<string> {
     if (r.ok) { const d = await r.json() as {choices?:Array<{message?:{content?:string}}> }; const t = d.choices?.[0]?.message?.content ?? ''; if (t.length > 50) return t }
   } catch {} }
   if (!GROQ) throw new Error('no AI key')
-  const r = await fetch('https://api.groq.com/openai/v1/chat/completions', { method:'POST', headers:{'Content-Type':'application/json',Authorization:`Bearer ${GROQ}`}, body:JSON.stringify({model:'llama-3.3-70b-versatile',max_tokens:2048,temperature:0.7,messages:[{role:'system',content:SYSTEM},{role:'user',content:p}]}) })
+  const r = await fetch('https://api.groq.com/openai/v1/chat/completions', { method:'POST', headers:{'Content-Type':'application/json',Authorization:`Bearer ${GROQ}`}, body:JSON.stringify({model:'openai/gpt-oss-120b',max_tokens:2048,temperature:0.7,messages:[{role:'system',content:SYSTEM},{role:'user',content:p}]}) })
   // 2026-08-15: Gemini was missing from the cascade entirely, so a Groq 429
   // became a 500 the customer saw. Free tier two of the COST LAW.
   const gem = await callGemini(p)
