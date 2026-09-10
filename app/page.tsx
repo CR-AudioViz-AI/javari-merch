@@ -39,7 +39,7 @@ export default function MerchPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-purple-950/20 to-slate-950">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-white/10">
+      <nav data-app-chrome className="fixed top-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
@@ -262,7 +262,7 @@ export default function MerchPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-white/10">
+      <footer data-app-chrome className="py-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
